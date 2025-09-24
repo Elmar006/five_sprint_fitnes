@@ -27,7 +27,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 	}
 
 	// Парсим количество шагов, учитывая возможные пробелы
-	trimmedSteps := strings.TrimSpace(parts[0])
+	trimmedSteps := parts[0]
 	steps, err := strconv.Atoi(trimmedSteps)
 	if err != nil {
 		return 0, 0, fmt.Errorf("ошибка при парсинге шагов: %v", err)
